@@ -178,14 +178,19 @@ $light_gray:#eee;
   overflow: hidden;
   background-image: url('../../assets/bg.jpg'); // 设置背景图
   background-size: 100%; // 充满
+  display: flex;
+  align-items: center;
 
   .login-form {
     position: relative;
     width: 520px;
     max-width: 100%;
-    padding: 160px 35px 0;
+    padding: 35px 40px 10px;
     margin: 0 auto;
     overflow: hidden;
+    background-color: #2d3a4b;
+    border-radius: 8px;
+    opacity: 0.9;
   }
 
   .tips {
