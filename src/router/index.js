@@ -54,7 +54,6 @@ export const constantRoutes = [
       meta: { title: '首页', icon: 'dashboard' }
     }]
   },
-
   {
     path: '/sys',
     component: Layout,
@@ -63,17 +62,38 @@ export const constantRoutes = [
     meta: { title: '系统管理', icon: 'sys' },
     children: [
       {
-        path: '用户管理',
-        name: 'Table',
-        component: () => import('@/views/table/index'),
-        meta: { title: 'Table', icon: 'table' }
+        path: 'user',
+        name: 'user',
+        component: () => import('@/views/sys/user'),
+        meta: { title: '用户管理', icon: 'userManage' }
       },
       {
-        path: 'tree',
-        name: 'Tree',
-        component: () => import('@/views/tree/index'),
-        meta: { title: 'Tree', icon: 'tree' }
+        path: 'role',
+        name: 'role',
+        component: () => import('@/views/sys/role'),
+        meta: { title: '角色管理', icon: 'roleManage' }
       }
+    ]
+  },
+  {
+    path: '/test',
+    component: Layout,
+    redirect: '/sys/test1',
+    name: 'test',
+    meta: { title: '测试管理', icon: 'form' },
+    children: [
+      {
+        path: 'test1',
+        name: 'test1',
+        component: () => import('@/views/test/test1'),
+        meta: { title: '功能管理', icon: '' }
+      },
+      {
+        path: 'test2',
+        name: 'test2',
+        component: () => import('@/views/test/test2'),
+        meta: { title: '功能管理', icon: '' }
+      },
     ]
   },
 
